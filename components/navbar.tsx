@@ -26,6 +26,12 @@ export function Navbar() {
               Services
             </Link>
             <Link
+              href="/kitchens"
+              className="text-sm font-medium text-foreground hover:text-primary transition-colors"
+            >
+              Kitchens
+            </Link>
+            <Link
               href="/#projects"
               className="text-sm font-medium text-foreground hover:text-primary transition-colors"
             >
