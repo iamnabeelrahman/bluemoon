@@ -257,15 +257,28 @@ export default function StylesSection() {
                         </div>
 
                         <div className="flex flex-col sm:flex-row gap-4">
-                            <button className="group relative overflow-hidden rounded-full bg-gradient-to-r from-primary-800 to-primary-900 px-8 py-4 text-white font-medium shadow-lg hover:shadow-xl hover:shadow-primary-800/30 transition-all">
+                            {/* WhatsApp Booking Button */}
+                            <a
+                                href="https://wa.me/9811016275?text=hello%20bluemoon%2C%20i%20ma%20intrested%20in%20your%20interioir%20services"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="group relative overflow-hidden rounded-full bg-linear-to-r from-primary-800 to-primary-900 px-8 py-4 text-white font-medium shadow-lg hover:shadow-xl hover:shadow-primary-800/30 transition-all"
+                            >
                                 <span className="flex items-center gap-3">
                                     Book Design Session
                                     <ArrowUpRight className="h-5 w-5 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
                                 </span>
-                            </button>
-                            <button className="rounded-full border-2 border-primary-800 px-8 py-4 text-primary-800 font-medium hover:bg-primary-50 transition-all">
+                            </a>
+
+                            {/* Instagram Portfolio Button */}
+                            <a
+                                href="https://www.instagram.com/blue.moon.interiors/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="rounded-full border-2 border-primary-800 px-8 py-4 text-primary-800 font-medium hover:bg-primary-50 transition-all"
+                            >
                                 View Full Portfolio
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>
