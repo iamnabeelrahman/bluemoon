@@ -4,15 +4,16 @@ import Header from '@/components/kitchens/Header'
 import Hero from '@/components/kitchens/Hero'
 import LeadSection from '@/components/kitchens/LeadSection'
 import StylesSection from '@/components/kitchens/StylesSection'
+import { Navbar } from '@/components/navbar'
 
 export default function Home() {
     return (
         <main className="min-h-screen">
-            <Header />
+            <Navbar />
             <Hero />
             <LeadSection />
             <StylesSection />
-            <ContactForm />
+            {/* <ContactForm /> */}
         </main>
     )
 }

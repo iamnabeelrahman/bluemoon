@@ -8,7 +8,7 @@ export default function Header() {
                 {/* Logo */}
                 <div className="flex items-center gap-2 font-bold text-xl">
                     <span className="rounded bg-primary-800 px-2 py-1 text-white">M</span>
-                    <span>MODULA</span>
+                    <span>Bluemoon</span>
                 </div>
 
                 {/* Actions */}
