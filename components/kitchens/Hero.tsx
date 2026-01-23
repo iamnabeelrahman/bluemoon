@@ -7,7 +7,7 @@ export default function Hero() {
             {/* Background Image with Parallax Effect */}
             <div className="absolute inset-0">
                 <Image
-                    src="/kitchen.jpg"
+                    src="/kitchens/ModularKitchens.jpeg"
                     alt="Luxury Modular Kitchen"
                     fill
                     className="object-cover scale-110"
