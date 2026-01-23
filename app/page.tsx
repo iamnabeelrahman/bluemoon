@@ -7,9 +7,10 @@ import { ReviewsSection } from "@/components/sections/reviews-section"
 import { WhyChooseSection } from "@/components/sections/why-choose-section"
 import { ContactSection } from "@/components/sections/contact-section"
 
+// ========== MAIN HOMEPAGE ==========
 export default function HomePage() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-white">
       <Navbar />
       <main>
         <HeroSection />

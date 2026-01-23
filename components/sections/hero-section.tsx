@@ -54,7 +54,8 @@ export function HeroSection() {
               {/* Responsive CTA Buttons */}
               <div className="mt-8 md:mt-12 flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4">
                 <a
-                  href="/#projects"
+                  href="https://www.instagram.com/blue.moon.interiors/"
+                  target="_blank"
                   className="group relative overflow-hidden rounded-full bg-primary-800 px-6 py-3 md:px-8 md:py-4 text-sm md:text-base font-medium text-white transition-all hover:bg-primary-900 hover:shadow-2xl hover:shadow-primary-800/30 w-full sm:w-auto text-center"
                 >
                   <span className="flex items-center justify-center gap-2 md:gap-3">
