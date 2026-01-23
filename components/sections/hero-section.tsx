@@ -41,10 +41,12 @@ export function HeroSection() {
 
               {/* Responsive Typography */}
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-light leading-tight text-white">
-                <span className="block font-serif text-gold-200 italic text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
-                  Transforming Spaces
+                <span className="block font-serif font-extralight !font-extralight text-gold-200 italic tracking-wide text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
+                  Building a positive
                 </span>
-                Into Timeless Masterpieces
+
+
+                ambiance
               </h1>
 
               <p className="mt-4 md:mt-6 text-base sm:text-lg md:text-xl font-light text-white/90 leading-relaxed max-w-xl">
