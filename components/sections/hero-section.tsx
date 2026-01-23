@@ -1,34 +1,108 @@
 import { Button } from "@/components/ui/button"
+import { ArrowRight, Phone, Sparkles } from "lucide-react"
+import Image from "next/image"
 import Link from "next/link"
 
+// ========== HERO SECTION ==========
 export function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center pt-16">
-      {/* Background Image */}
-      <div className="absolute inset-0 z-0">
-        <img src="/luxury-modern-living-room-interior-design-with-ele.jpg" alt="Luxury Interior Design" className="w-full h-full object-cover" />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/40 to-background/60" />
-      </div>
+    <section className="relative w-full overflow-hidden">
+      {/* Adjust height for all devices */}
+      <div className="relative h-[95svh] min-h-[600px] max-h-[1200px] lg:h-[90vh]">
+        {/* Background Image with optimized loading */}
+        <div className="absolute inset-0">
+          <Image
+            src="/luxury-modern-living-room-interior-design-with-ele.jpg"
+            alt="Luxury Interior Design"
+            fill
+            className="object-cover scale-110"
+            priority
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 1200px"
+            quality={90}
+          />
+          {/* Gradient overlay optimized for all screens */}
+          <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/50 to-black/70 md:from-black/70 md:via-black/40 md:to-black/60" />
+        </div>
 
-      {/* Content */}
-      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold text-foreground mb-6 text-balance">
-          Transforming Spaces into Timeless Designs
-        </h1>
-        <p className="text-lg sm:text-xl text-foreground/80 mb-8 max-w-2xl mx-auto text-balance">
-          Premium Interior Design Solutions by Bluemoon
-        </p>
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <Link href="/#projects">
-            <Button size="lg" className="w-full sm:w-auto">
-              View Our Projects
-            </Button>
-          </Link>
-          <Link href="/#contact">
-            <Button size="lg" variant="outline" className="w-full sm:w-auto bg-background/50 backdrop-blur-sm">
-              Get in Touch
-            </Button>
-          </Link>
+        {/* Pattern Overlay - subtle on mobile */}
+        <div className="absolute inset-0 opacity-[0.03] md:opacity-5 bg-[url('/pattern.svg')] bg-repeat" />
+
+        {/* Content Container */}
+        <div className="relative md:mt-6 z-10 h-full container mx-auto px-4 sm:px-6 lg:px-8 flex items-center">
+          <div className="w-full max-w-6xl">
+            <div className="max-w-2xl lg:max-w-3xl">
+              {/* Luxury Badge - responsive sizing */}
+              <div className="mb-6 md:mb-8 mt-4 md:mt-8 inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 md:px-5 md:py-2.5 backdrop-blur-sm border border-white/20">
+                <Sparkles className="h-3 w-3 md:h-4 md:w-4 text-gold-400" />
+                <span className="text-xs md:text-sm font-medium text-white/90">
+                  PREMIUM INTERIOR CRAFTSMANSHIP
+                </span>
+              </div>
+
+              {/* Responsive Typography */}
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-light leading-tight text-white">
+                <span className="block font-serif text-gold-200 italic text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
+                  Transforming Spaces
+                </span>
+                Into Timeless Masterpieces
+              </h1>
+
+              <p className="mt-4 md:mt-6 text-base sm:text-lg md:text-xl font-light text-white/90 leading-relaxed max-w-xl">
+                Premium interior design solutions by Bluemoon, where innovation meets artistry for unparalleled elegance.
+              </p>
+
+              {/* Responsive CTA Buttons */}
+              <div className="mt-8 md:mt-12 flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4">
+                <a
+                  href="/#projects"
+                  className="group relative overflow-hidden rounded-full bg-primary-800 px-6 py-3 md:px-8 md:py-4 text-sm md:text-base font-medium text-white transition-all hover:bg-primary-900 hover:shadow-2xl hover:shadow-primary-800/30 w-full sm:w-auto text-center"
+                >
+                  <span className="flex items-center justify-center gap-2 md:gap-3">
+                    Explore Our Portfolio
+                    <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                  </span>
+                </a>
+                <a
+                  href="/#contact"
+                  className="group rounded-full border border-white/30 bg-transparent px-6 py-3 md:px-8 md:py-4 text-sm md:text-base font-medium text-white backdrop-blur-sm transition-all hover:bg-white/10 hover:border-white/50 w-full sm:w-auto text-center"
+                >
+                  <span className="flex items-center justify-center gap-2 md:gap-3">
+                    <Phone className="h-4 w-4 md:h-5 md:w-5" />
+                    Schedule Consultation
+                  </span>
+                </a>
+              </div>
+
+              {/* Luxury Indicator - responsive hide/show */}
+              <div className="mt-12 md:mt-16">
+                <div className="hidden sm:flex items-center gap-4 md:gap-6 text-xs md:text-sm text-white/70">
+                  <div className="h-px flex-1 bg-gradient-to-r from-transparent to-white/20" />
+                  <span className="font-light whitespace-nowrap px-2">
+                    TIMELESS DESIGNS • PREMIUM MATERIALS • ARTISAN CRAFT
+                  </span>
+                  <div className="h-px flex-1 bg-gradient-to-r from-white/20 to-transparent" />
+                </div>
+                {/* Mobile version */}
+                <div className="sm:hidden flex flex-col items-center gap-2 text-xs text-white/60">
+                  <div className="flex items-center justify-center gap-3">
+                    <div className="h-px w-8 bg-white/20" />
+                    <span>TIMELESS DESIGNS</span>
+                    <div className="h-px w-8 bg-white/20" />
+                  </div>
+                  <div className="flex items-center justify-center gap-3">
+                    <span>PREMIUM MATERIALS</span>
+                    <div className="h-px w-4 bg-white/20" />
+                    <span>ARTISAN CRAFT</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Scroll Indicator - hidden on mobile, visible on larger screens */}
+        <div className="absolute bottom-4 md:bottom-8 left-1/2 -translate-x-1/2 hidden sm:block">
+          <div className="h-8 md:h-12 w-px bg-gradient-to-b from-white/40 to-transparent" />
         </div>
       </div>
     </section>
