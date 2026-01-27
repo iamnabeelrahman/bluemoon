@@ -13,16 +13,16 @@ const projects = [
     location: "Mumbai, Maharashtra",
     description:
       "Thoughtful layouts, 3D visualization, and ergonomic planning focused on light, airflow, and daily usability.",
-    image: "/modern-luxury-villa-interior-with-minimalist-desig.jpg",
+    image: "/interior-design-and-planning.jpeg",
     category: "Residential"
   },
   {
     id: 2,
-    name: "Living Area & Bedroom Interiors",
+    name: "Living Area & Bedroom InteriorsLiving Area & Bedroom Interiors",
     location: "Bangalore, Karnataka",
     description:
       "TV units, wardrobes, wall paneling, ceilings, lighting, and finishes designed for comfort and longevity.",
-    image: "/modern-corporate-office-interior-with-glass-partit.jpg",
+    image: "/Living-Area-Bedroom-Interiors.jpeg",
     category: "Commercial"
   },
   {
@@ -31,16 +31,16 @@ const projects = [
     location: "Delhi, NCR",
     description:
       "Workflow-driven kitchen planning with premium hardware, moisture-resistant materials, and smart storage.",
-    image: "/luxury-apartment-interior-with-elegant-furniture.jpg",
+    image: "/luxury-apartment-interior-with-elegant-furniture.jpeg",
     category: "Residential"
   },
   {
     id: 4,
     name: "Bathroom Design & Plumbing Solutions",
-    location: "Pune, Maharashtra",
+    location: "Pturnkne, Maharashtra",
     description:
       "Custom bathrooms with concealed plumbing, waterproofing, premium fittings, and long-term reliability.",
-    image: "/modern-restaurant-ambient.png",
+    image: "/modern-bathroom-ambient.jpeg",
     category: "Commercial"
   },
   {
@@ -49,16 +49,16 @@ const projects = [
     location: "Hyderabad, Telangana",
     description:
       "Bespoke furniture, paneling, partitions, and joinery crafted for Delhi NCR climate conditions.",
-    image: "/luxury-penthouse-city-view.png",
+    image: "/custom-furniture.jpeg",
     category: "Residential"
   },
   {
     id: 6,
     name: "Turnkey Interior & Civil Execution",
-    location: "Goa, India",
+    location: "Goa, Indicustom-furniture.jpega",
     description:
       "Complete interior and civil execution with one team, one timeline, and full accountability.",
-    image: "/boutique-hotel-interior-with-tropical-design.jpg",
+    image: "/turnkey-interior.jpeg",
     category: "Commercial"
   },
 ]
