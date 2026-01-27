@@ -222,7 +222,7 @@ export function BlogsSection() {
         </div>
 
         {/* Categories */}
-        <div className="flex flex-wrap justify-center gap-4 mb-16">
+        <div className=" hidden md:flex flex-wrap justify-center gap-4 mb-16">
           {["All", "Wellness", "Entertainment", "Living Spaces", "Innovation", "Spiritual"].map(
             (category) => (
               <button
