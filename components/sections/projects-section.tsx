@@ -5,52 +5,60 @@ import { ArrowRight, Maximize2 } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 
+
 const projects = [
   {
     id: 1,
-    name: "Modern Villa Residence",
+    name: "Interior Design & Space Planning",
     location: "Mumbai, Maharashtra",
-    description: "Contemporary luxury villa with minimalist design and premium finishes",
+    description:
+    .
+      "Thoughtful layouts, 3D visualization, and ergonomic planning focused on light, airflow, and daily usability.",
     image: "/modern-luxury-villa-interior-with-minimalist-desig.jpg",
     category: "Residential"
   },
   {
     id: 2,
-    name: "Corporate Office Space",
+    name: "Living Area & Bedroom Interiors",
     location: "Bangalore, Karnataka",
-    description: "Sleek corporate office design with collaborative workspaces",
+    description:
+      "TV units, wardrobes, wall paneling, ceilings, lighting, and finishes designed for comfort and longevity.",
     image: "/modern-corporate-office-interior-with-glass-partit.jpg",
     category: "Commercial"
   },
   {
     id: 3,
-    name: "Luxury Apartment",
+    name: "Modular Kitchens & Utility Areas",
     location: "Delhi, NCR",
-    description: "Elegant apartment design blending comfort with sophistication",
+    description:
+      "Workflow-driven kitchen planning with premium hardware, moisture-resistant materials, and smart storage.",
     image: "/luxury-apartment-interior-with-elegant-furniture.jpg",
     category: "Residential"
   },
   {
     id: 4,
-    name: "Restaurant Interior",
+    name: "Bathroom Design & Plumbing Solutions",
     location: "Pune, Maharashtra",
-    description: "Contemporary restaurant design with warm ambient lighting",
+    description:
+      "Custom bathrooms with concealed plumbing, waterproofing, premium fittings, and long-term reliability.",
     image: "/modern-restaurant-ambient.png",
     category: "Commercial"
   },
   {
     id: 5,
-    name: "Penthouse Suite",
+    name: "Custom Furniture & Carpentry",
     location: "Hyderabad, Telangana",
-    description: "Opulent penthouse with panoramic views and bespoke furnishings",
+    description:
+      "Bespoke furniture, paneling, partitions, and joinery crafted for Delhi NCR climate conditions.",
     image: "/luxury-penthouse-city-view.png",
     category: "Residential"
   },
   {
     id: 6,
-    name: "Boutique Hotel",
+    name: "Turnkey Interior & Civil Execution",
     location: "Goa, India",
-    description: "Coastal-inspired boutique hotel with tropical aesthetics",
+    description:
+      "Complete interior and civil execution with one team, one timeline, and full accountability.",
     image: "/boutique-hotel-interior-with-tropical-design.jpg",
     category: "Commercial"
   },
@@ -109,9 +117,13 @@ export function ProjectsSection() {
                     <Badge className="mb-4 bg-white/20 backdrop-blur-sm border-white/30 text-white hover:bg-white/30">
                       {project.location}
                     </Badge>
+                    <h3 className="text-2xl font-light text-white mb-3">
+                      {project.name}
+                    </h3>
+                    <p className="text-white/90 mb-6">
+                      {project.description}                    </p>
 
-                    <h3 className="text-2xl font-light text-white mb-3">{project.name}</h3>
-                    <p className="text-white/90 mb-6">{project.description}</p>
+
 
                     {/* CTA Button */}
                     <button className="inline-flex items-center gap-3 rounded-full bg-white/20 backdrop-blur-sm px-6 py-3 text-white hover:bg-white/30 transition-all duration-300 border border-white/30">
