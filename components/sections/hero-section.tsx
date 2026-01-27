@@ -6,38 +6,69 @@ import Link from "next/link"
 // ========== HERO SECTION ==========
 export function HeroSection() {
   return (
-    <section className="relative w-full overflow-hidden">
+    <section className="relative w-full mt-4 overflow-hidden">
       {/* Adjust height for all devices */}
-      <div className="relative h-[95svh] min-h-[600px] max-h-[1200px] lg:h-[90vh]">
-        {/* Background Image with optimized loading */}
+      <div className="relative h-[95svh] min-h-[600px] max-h-[100px] lg:h-1090vh]">
+        {/* Background Media - Video on mobile, Image on larger screens */}
         <div className="absolute inset-0">
-          <Image
-            src="/luxury-modern-living-room-interior-design-with-ele.jpg"
-            alt="Luxury Interior Design"
-            fill
-            className="object-cover scale-110"
-            priority
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 1200px"
-            quality={90}
-          />
-          {/* Gradient overlay optimized for all screens */}
-          <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/50 to-black/70 md:from-black/70 md:via-black/40 md:to-black/60" />
+          {/* Video - visible only on mobile */}
+          <div className="absolute inset-0 md:hidden">
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="w-full h-full object-cover scale-110"
+              poster="/luxury-modern-living-room-interior-design-with-ele.jpg" // Fallback image
+            >
+              <source src="/interiors/homevideo.mp4" type="video/mp4" />
+              <source src="/hero-video-mobile.webm" type="video/webm" />
+              {/* Fallback to image if video can't load */}
+              <Image
+                src="/luxury-modern-living-room-interior-design-with-ele.jpg"
+                alt="Luxury Interior Design"
+                fill
+                className="object-cover scale-110"
+                priority
+                sizes="100vw"
+                quality={90}
+              />
+            </video>
+            {/* Gradient overlay for video */}
+            <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/50 to-black/70" />
+          </div>
+
+          {/* Image - visible only on medium screens and up */}
+          <div className="hidden md:block absolute inset-0">
+            <Image
+              src="/luxury-modern-living-room-interior-design-with-ele.jpg"
+              alt="Luxury Interior Design"
+              fill
+              className="object-cover scale-110"
+              priority
+              sizes="(max-width: 1024px) 100vw, 1200px"
+              quality={90}
+            />
+            {/* Gradient overlay for image */}
+            <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-black/60" />
+          </div>
         </div>
 
         {/* Pattern Overlay - subtle on mobile */}
         <div className="absolute inset-0 opacity-[0.03] md:opacity-5 bg-[url('/pattern.svg')] bg-repeat" />
 
         {/* Content Container */}
-        <div className="relative md:mt-6 z-10 h-full container mx-auto px-4 sm:px-6 lg:px-8 flex items-center">
+        <div className="relative mt-6 md:mt-6 z-10 h-full container mx-auto px-4 sm:px-6 lg:px-8 flex items-center">
           <div className="w-full max-w-6xl">
             <div className="max-w-2xl lg:max-w-3xl">
               {/* Luxury Badge - responsive sizing */}
-              <div className="mb-6 md:mb-8 mt-4 md:mt-8 inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 md:px-5 md:py-2.5 backdrop-blur-sm border border-white/20">
-                <Sparkles className="h-3 w-3 md:h-4 md:w-4 text-gold-400" />
-                <span className="text-xs md:text-sm font-medium text-white/90">
+              <div className="mb-4 md:mb-8 mt-2 md:mt-8 inline-flex items-center gap-1.5 md:gap-2 rounded-full bg-white/10 px-2.5 py-1 md:px-5 md:py-2.5 backdrop-blur-sm border border-white/20">
+                <Sparkles className="h-2.5 w-2.5 md:h-4 md:w-4 text-gold-400" />
+                <span className="text-[10px] md:text-sm font-medium text-white/90 tracking-wide">
                   PREMIUM INTERIOR CRAFTSMANSHIP
                 </span>
               </div>
+
 
               {/* Responsive Typography */}
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-light leading-tight text-white">
