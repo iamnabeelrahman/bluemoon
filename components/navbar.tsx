@@ -21,7 +21,7 @@ export function Navbar() {
               width={0}
               height={0}
               sizes="100vw"
-              className="w-16 h-22 lg:w-[120px] lg:h-[130px]"
+              className="w-15 h-22 lg:w-[110px] lg:h-[130px]"
             />
           </Link>
 
