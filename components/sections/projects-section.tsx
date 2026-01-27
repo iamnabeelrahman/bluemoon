@@ -12,7 +12,6 @@ const projects = [
     name: "Interior Design & Space Planning",
     location: "Mumbai, Maharashtra",
     description:
-    .
       "Thoughtful layouts, 3D visualization, and ergonomic planning focused on light, airflow, and daily usability.",
     image: "/modern-luxury-villa-interior-with-minimalist-desig.jpg",
     category: "Residential"
