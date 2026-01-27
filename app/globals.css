@@ -46,7 +46,7 @@
   --primary-500: oklch(0.42 0.12 245); /* your current primary */
   --primary-600: oklch(0.36 0.12 245);
   --primary-700: oklch(0.3 0.11 245);
-  --primary-800: oklch(0.24 0.1 245);
+  --primary-800: rgb(0, 32, 74);
   --primary-900: oklch(0.18 0.08 245);
 }
 
@@ -155,5 +155,16 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none; /* IE & Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none; /* Chrome, Safari */
   }
 }
