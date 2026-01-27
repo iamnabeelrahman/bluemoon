@@ -1,6 +1,8 @@
 
 'use client'
 
+import Image from "next/image"
+
 export default function Header() {
     return (
         <header className="fixed top-0 z-50 w-full bg-white shadow-sm">

@@ -14,16 +14,17 @@ export function Navbar() {
       <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3 group">
-            <div className="relative w-10 h-10 rounded-lg bg-gradient-to-br from-primary-800 to-primary-900 flex items-center justify-center">
-              <Sparkles className="w-5 h-5 text-white" />
-              <div className="absolute inset-0 rounded-lg bg-gradient-to-br from-white/10 to-transparent" />
-            </div>
-            <div className="flex flex-col">
-              <span className="text-2xl font-serif font-light tracking-wider text-gray-900">Bluemoon</span>
-              <span className="text-xs font-light text-gray-500 tracking-widest">INTERIORS</span>
-            </div>
+          <Link href="/" className="flex ml-3 items-center gap-3 group">
+            <Image
+              src="/logo.png"
+              alt="Logo"
+              width={0}
+              height={0}
+              sizes="100vw"
+              className="w-16 h-22 lg:w-[120px] lg:h-[130px]"
+            />
           </Link>
+
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-8">
