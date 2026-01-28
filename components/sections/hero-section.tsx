@@ -3,12 +3,11 @@ import { ArrowRight, Phone, Sparkles } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 
-// ========== HERO SECTION ==========
 export function HeroSection() {
   return (
-    <section className="relative w-full mt-4 overflow-hidden">
-      {/* Adjust height for all devices */}
-      <div className="relative h-[95svh] min-h-[600px] max-h-[100px] lg:h-1090vh]">
+    <section className="relative w-full overflow-hidden">
+      {/* Main container with full screen height */}
+      <div className="relative h-[100svh] min-h-[600px] lg:h-[90vh] xl:h-[85vh]">
         {/* Background Media - Video on mobile, Image on larger screens */}
         <div className="absolute inset-0">
           {/* Video - visible only on mobile */}
@@ -18,8 +17,8 @@ export function HeroSection() {
               loop
               muted
               playsInline
-              className="w-full h-full object-cover scale-110"
-              poster="/luxury-modern-living-room-interior-design-with-ele.jpg" // Fallback image
+              className="w-full h-full object-cover"
+              poster="/luxury-modern-living-room-interior-design-with-ele.jpg"
             >
               <source src="/interiors/homevideo.mp4" type="video/mp4" />
               <source src="/hero-video-mobile.webm" type="video/webm" />
@@ -28,14 +27,14 @@ export function HeroSection() {
                 src="/luxury-modern-living-room-interior-design-with-ele.jpg"
                 alt="Luxury Interior Design"
                 fill
-                className="object-cover scale-110"
+                className="object-cover"
                 priority
                 sizes="100vw"
                 quality={90}
               />
             </video>
-            {/* Gradient overlay for video */}
-            <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/50 to-black/70" />
+            {/* Enhanced gradient overlay for better text readability */}
+            <div className="absolute inset-0 bg-gradient-to-b from-black/85 via-black/60 to-black/75" />
           </div>
 
           {/* Image - visible only on medium screens and up */}
@@ -44,9 +43,9 @@ export function HeroSection() {
               src="/luxury-modern-living-room-interior-design-with-ele.jpg"
               alt="Luxury Interior Design"
               fill
-              className="object-cover scale-110"
+              className="object-cover"
               priority
-              sizes="(max-width: 1024px) 100vw, 1200px"
+              sizes="100vw"
               quality={90}
             />
             {/* Gradient overlay for image */}
@@ -57,26 +56,23 @@ export function HeroSection() {
         {/* Pattern Overlay - subtle on mobile */}
         <div className="absolute inset-0 opacity-[0.03] md:opacity-5 bg-[url('/pattern.svg')] bg-repeat" />
 
-        {/* Content Container */}
-        <div className="relative mt-6 md:mt-6 z-10 h-full container mx-auto px-4 sm:px-6 lg:px-8 flex items-center">
+        {/* Content Container - centered with better padding */}
+        <div className="relative z-10 h-full container mx-auto px-4 sm:px-6 lg:px-8 flex items-center">
           <div className="w-full max-w-6xl">
             <div className="max-w-2xl lg:max-w-3xl">
               {/* Luxury Badge - responsive sizing */}
-              <div className="mb-4 md:mb-8 mt-2 md:mt-8 inline-flex items-center gap-1.5 md:gap-2 rounded-full bg-white/10 px-2.5 py-1 md:px-5 md:py-2.5 backdrop-blur-sm border border-white/20">
+              <div className="mb-4 md:mb-8 mt-2 inline-flex items-center gap-1.5 md:gap-2 rounded-full bg-white/10 px-2.5 py-1 md:px-5 md:py-2.5 backdrop-blur-sm border border-white/20">
                 <Sparkles className="h-2.5 w-2.5 md:h-4 md:w-4 text-gold-400" />
                 <span className="text-[10px] md:text-sm font-medium text-white/90 tracking-wide">
                   PREMIUM INTERIOR CRAFTSMANSHIP
                 </span>
               </div>
 
-
               {/* Responsive Typography */}
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-light leading-tight text-white">
-                <span className="block font-serif font-extralight !font-extralight text-gold-200 italic tracking-wide text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
+                <span className="block font-serif font-extralight text-gold-200 italic tracking-wide text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
                   Building a positive
                 </span>
-
-
                 ambiance
               </h1>
 
@@ -108,7 +104,7 @@ export function HeroSection() {
               </div>
 
               {/* Luxury Indicator - responsive hide/show */}
-              <div className="mt-12 md:mt-16">
+              <div className="mt-8 md:mt-16">
                 <div className="hidden sm:flex items-center gap-4 md:gap-6 text-xs md:text-sm text-white/70">
                   <div className="h-px flex-1 bg-gradient-to-r from-transparent to-white/20" />
                   <span className="font-light whitespace-nowrap px-2">

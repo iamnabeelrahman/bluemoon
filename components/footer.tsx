@@ -123,6 +123,7 @@ export function Footer() {
                 className="rounded-lg bg-white/10 p-2 hover:bg-white/20 transition-colors"
               >
                 <InstagramIcon className="w-5 h-5 text-white" />
+                
               </a>
               {/* <a href="#" className="rounded-lg bg-white/10 p-2 hover:bg-white/20 transition-colors">
                 <LinkedinIcon className="w-5 h-5 text-white" />
