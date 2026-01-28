@@ -2,6 +2,8 @@ import { Button } from "@/components/ui/button"
 import { ArrowRight, Phone, Sparkles } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
+import { FaWhatsapp } from "react-icons/fa";
+
 
 export function HeroSection() {
   return (
@@ -93,14 +95,17 @@ export function HeroSection() {
                   </span>
                 </a>
                 <a
-                  href="/#contact"
+                  href="https://wa.me/9811016275"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="group rounded-full border border-white/30 bg-transparent px-6 py-3 md:px-8 md:py-4 text-sm md:text-base font-medium text-white backdrop-blur-sm transition-all hover:bg-white/10 hover:border-white/50 w-full sm:w-auto text-center"
                 >
                   <span className="flex items-center justify-center gap-2 md:gap-3">
-                    <Phone className="h-4 w-4 md:h-5 md:w-5" />
+                    <FaWhatsapp className="h-4 w-4 md:h-5 md:w-5" />
                     Schedule Consultation
                   </span>
                 </a>
+
               </div>
 
               {/* Luxury Indicator - responsive hide/show */}

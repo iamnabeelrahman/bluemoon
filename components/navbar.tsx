@@ -10,21 +10,21 @@ export function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-xl border-b border-white/10">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-xl border-b border-gray-100">
       <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
-          {/* Logo */}
-          <Link href="/" className="flex ml-3 items-center gap-3 group">
+        {/* Reduced height for mobile, normal for desktop */}
+        <div className="flex items-center justify-between h-10 lg:h-20">
+          {/* Logo - slightly smaller on mobile */}
+          <Link href="/" className="flex items-center gap-3 group">
             <Image
               src="/logo.png"
               alt="Logo"
               width={0}
               height={0}
               sizes="100vw"
-              className="w-15 h-22 lg:w-[110px] lg:h-[130px]"
+              className="w-12 h-16 lg:w-[110px] lg:h-[130px]"
             />
           </Link>
-
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-8">
@@ -74,12 +74,12 @@ export function Navbar() {
             </Link> */}
           </div>
 
-          {/* Mobile menu button */}
+          {/* Mobile menu button - smaller on mobile */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden p-3 rounded-lg bg-white/10 backdrop-blur-sm border border-gray-200"
+            className="lg:hidden p-1 rounded-lg border border-gray-200  transition-colors"
           >
-            {isOpen ? <X className="w-6 h-6 text-gray-700" /> : <Menu className="w-6 h-6 text-gray-700" />}
+            {isOpen ? <X className="w-5 h-5 text-gray-700" /> : <Menu className="w-5 h-5 text-gray-700" />}
           </button>
         </div>
       </div>
@@ -87,39 +87,44 @@ export function Navbar() {
       {/* Mobile Navigation */}
       {isOpen && (
         <div className="lg:hidden border-t border-gray-100 bg-white/95 backdrop-blur-xl">
-          <div className="px-4 py-6 space-y-4">
+          <div className="px-4 py-4 space-y-2">
             <Link
               href="/#services"
-              className="block text-base font-light text-gray-700 hover:text-primary-800 transition-colors py-3 border-b border-gray-100"
+              className="block text-sm font-light text-gray-700 hover:text-primary-800 transition-colors py-2.5 border-b border-gray-100"
+              onClick={() => setIsOpen(false)}
             >
               Services
             </Link>
             <Link
               href="/kitchens"
-              className="block text-base font-light text-gray-700 hover:text-primary-800 transition-colors py-3 border-b border-gray-100"
+              className="block text-sm font-light text-gray-700 hover:text-primary-800 transition-colors py-2.5 border-b border-gray-100"
+              onClick={() => setIsOpen(false)}
             >
               Kitchens
             </Link>
             <Link
               href="/#projects"
-              className="block text-base font-light text-gray-700 hover:text-primary-800 transition-colors py-3 border-b border-gray-100"
+              className="block text-sm font-light text-gray-700 hover:text-primary-800 transition-colors py-2.5 border-b border-gray-100"
+              onClick={() => setIsOpen(false)}
             >
               Projects
             </Link>
             <Link
               href="/#reviews"
-              className="block text-base font-light text-gray-700 hover:text-primary-800 transition-colors py-3 border-b border-gray-100"
+              className="block text-sm font-light text-gray-700 hover:text-primary-800 transition-colors py-2.5 border-b border-gray-100"
+              onClick={() => setIsOpen(false)}
             >
               Reviews
             </Link>
             <Link
               href="/#contact"
-              className="block text-base font-light text-gray-700 hover:text-primary-800 transition-colors py-3 border-b border-gray-100"
+              className="block text-sm font-light text-gray-700 hover:text-primary-800 transition-colors py-2.5 border-b border-gray-100"
+              onClick={() => setIsOpen(false)}
             >
               Contact
             </Link>
-            {/* <Link href="/login">
-              <button className="w-full mt-4 rounded-full bg-gradient-to-r from-primary-800 to-primary-900 px-6 py-3 text-base font-medium text-white hover:shadow-lg hover:shadow-primary-800/30 transition-all">
+            {/* <Link href="/login" onClick={() => setIsOpen(false)}>
+              <button className="w-full mt-3 rounded-full bg-gradient-to-r from-primary-800 to-primary-900 px-5 py-2.5 text-sm font-medium text-white hover:shadow-lg hover:shadow-primary-800/30 transition-all">
                 Client Portal
               </button>
             </Link> */}
@@ -129,14 +134,3 @@ export function Navbar() {
     </nav>
   )
 }
-
-
-
-
-
-
-
-
-
-
-
