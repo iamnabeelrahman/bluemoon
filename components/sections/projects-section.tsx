@@ -7,15 +7,7 @@ import Link from "next/link"
 
 
 const projects = [
-  {
-    id: 1,
-    name: "Interior Design & Space Planning",
-    location: "Mumbai, Maharashtra",
-    description:
-      "Thoughtful layouts, 3D visualization, and ergonomic planning focused on light, airflow, and daily usability.",
-    image: "/interior-design-and-planning.jpeg",
-    category: "Residential"
-  },
+
   {
     id: 2,
     name: "Living Area & Bedroom InteriorsLiving Area & Bedroom Interiors",
@@ -59,7 +51,16 @@ const projects = [
     description:
       "Complete interior and civil execution with one team, one timeline, and full accountability.",
     image: "/turnkey-interior.jpeg",
-    category: "Commercial"
+    category: "Residential"
+  },
+  {
+    id: 1,
+    name: "Interior Design & Space Planning",
+    location: "Mumbai, Maharashtra",
+    description:
+      "Thoughtful layouts, 3D visualization, and ergonomic planning focused on light, airflow, and daily usability.",
+    image: "/interior-design-and-planning.jpeg",
+    category: "Residential"
   },
 ]
 

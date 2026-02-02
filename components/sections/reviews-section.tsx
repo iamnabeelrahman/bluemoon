@@ -4,36 +4,69 @@ import { Star, Quote } from "lucide-react"
 const reviews = [
   {
     name: "Mrs Sarika Jain",
-    role: "Residential interior",
+    role: "Residential Interior – Noida",
     rating: 4.8,
     review:
       "Bluemoon transformed our home into a masterpiece. Their attention to detail and professionalism is unmatched.",
-    image: "/client1.jpg"
+    image: "/client1.jpg",
   },
   {
     name: "Mrs Saira Malik",
-    role: "Residential interior & Modular kitchent",
-    rating: 5,
+    role: "Residential Interior & Modular Kitchen – Okhla",
+    rating: 5.0,
     review:
       "Exceptional service from start to finish. The design team understood our vision perfectly and delivered beyond expectations.",
-    image: "/client2.jpg"
+    image: "/client2.jpg",
   },
   {
     name: "Mr Ishpreet Singh",
-    role: "Home Makeover",
-    rating: 5,
+    role: "Home Makeover – Gurugram",
+    rating: 5.0,
     review:
-      "Our office space looks absolutely stunning. Bluemoon created an environment that inspires creativity and productivity.",
-    image: "/client3.jpg"
+      "Our living space looks absolutely stunning. Bluemoon created an environment that feels both modern and comfortable.",
+    image: "/client3.jpg",
   },
   {
     name: "Kalra Residence",
-    role: "Turnkey interior and Civil work",
+    role: "Turnkey Interior & Civil Work – East Delhi",
     rating: 4.9,
-    review: "Professional, creative, and reliable. They completed our project on time with premium quality materials.",
-    image: "/client4.jpg"
+    review:
+      "Professional, creative, and reliable. The project was completed on time with excellent finishing and material quality.",
+    image: "/client4.jpg",
   },
-]
+  {
+    name: "Mr Rohit Verma",
+    role: "Modular Kitchen & Wardrobes – Noida Sector 76",
+    rating: 4.8,
+    review:
+      "Very systematic work process. The team coordinated well and delivered exactly what was discussed during the design stage.",
+    image: "/client5.jpg",
+  },
+  {
+    name: "Mrs Neha Aggarwal",
+    role: "Full Home Interior – Greater Noida West",
+    rating: 5.0,
+    review:
+      "From design to execution, everything was smooth. Bluemoon maintained transparency and quality throughout the project.",
+    image: "/client6.jpg",
+  },
+  {
+    name: "Mr Jitender Choudhary",
+    role: "Residential Interior – Dera Village, Delhi",
+    rating: 4.9,
+    review:
+      "The team handled the work with proper planning and supervision. Quality of carpentry and finishing was very good.",
+    image: "/client7.jpg",
+  },
+  {
+    name: "Asad Islam",
+    role: "Apartment Interior – Gurugram",
+    rating: 4.8,
+    review:
+      "Clear communication, professional execution, and timely delivery. The final outcome matched the proposed designs well.",
+    image: "/client8.jpg",
+  },
+];
 
 export function ReviewsSection() {
   return (
