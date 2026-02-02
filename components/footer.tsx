@@ -1,5 +1,6 @@
 import Link from "next/link"
 import { Facebook, Instagram, Linkedin, Mail, Phone, MapPin, InstagramIcon, LinkedinIcon, Sparkles } from "lucide-react"
+import Image from "next/image"
 
 // ========== FOOTER ==========
 export function Footer() {
@@ -16,8 +17,8 @@ export function Footer() {
           {/* Company Info */}
           <div className="space-y-6">
             <div className="flex items-center gap-3">
-              <div className="relative w-12 h-12 rounded-lg bg-gradient-to-br from-primary-800 to-primary-900 flex items-center justify-center">
-                <Sparkles className="w-6 h-6 text-white" />
+              <div className="relative w-12 h-12 rounded-lg bg-gradient-to-br from-white to-gray-300 flex items-center justify-center">
+                <Image alt="logo"  src="/logo.png" height={10} width={10} className="w-6 h-6 text-white" />
                 <div className="absolute inset-0 rounded-lg bg-gradient-to-br from-white/10 to-transparent" />
               </div>
               <div className="flex flex-col">
@@ -56,6 +57,12 @@ export function Footer() {
                 <Link href="/#contact" className="text-sm text-gray-400 hover:text-white transition-colors flex items-center gap-2">
                   <div className="h-0.5 w-0 bg-primary-500 group-hover:w-3 transition-all" />
                   Contact Us
+                </Link>
+              </li>
+              <li>
+                <Link href="/terms" className="text-sm text-gray-400 hover:text-white transition-colors flex items-center gap-2">
+                  <div className="h-0.5 w-0 bg-primary-500 group-hover:w-3 transition-all" />
+                  Terms & Conditions
                 </Link>
               </li>
             </ul>

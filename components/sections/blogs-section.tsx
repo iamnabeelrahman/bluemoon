@@ -106,6 +106,66 @@ const blogPosts = [
     featured: true,
     gradient: "from-indigo-500/10 to-indigo-100",
   },
+  {
+    id: 7,
+    title: "Bar Units: The Art of Entertaining",
+    description:
+      "Discover how bespoke bar units transform evenings into curated experiences of refined hosting.",
+    excerpt:
+      "Soft-lit storage solutions crafted for intimate gatherings where every detail contributes to the ambiance...",
+    image: "/bar-unit.jpg",
+    date: "Mar 15, 2024",
+    readTime: "5 min",
+    category: "Entertainment",
+    views: "2.4k",
+    featured: true,
+    gradient: "from-amber-500/10 to-amber-100",
+  },
+  {
+    id: 8,
+    title: "Bar Units: The Art of Entertaining",
+    description:
+      "Discover how bespoke bar units transform evenings into curated experiences of refined hosting.",
+    excerpt:
+      "Soft-lit storage solutions crafted for intimate gatherings where every detail contributes to the ambiance...",
+    image: "/bar-unit.jpg",
+    date: "Mar 15, 2024",
+    readTime: "5 min",
+    category: "Entertainment",
+    views: "2.4k",
+    featured: true,
+    gradient: "from-amber-500/10 to-amber-100",
+  },
+  {
+    id: 9,
+    title: "Bar Units: The Art of Entertaining",
+    description:
+      "Discover how bespoke bar units transform evenings into curated experiences of refined hosting.",
+    excerpt:
+      "Soft-lit storage solutions crafted for intimate gatherings where every detail contributes to the ambiance...",
+    image: "/bar-unit.jpg",
+    date: "Mar 15, 2024",
+    readTime: "5 min",
+    category: "Entertainment",
+    views: "2.4k",
+    featured: true,
+    gradient: "from-amber-500/10 to-amber-100",
+  },
+  {
+    id: 10,
+    title: "Bar Units: The Art of Entertaining",
+    description:
+      "Discover how bespoke bar units transform evenings into curated experiences of refined hosting.",
+    excerpt:
+      "Soft-lit storage solutions crafted for intimate gatherings where every detail contributes to the ambiance...",
+    image: "/bar-unit.jpg",
+    date: "Mar 15, 2024",
+    readTime: "5 min",
+    category: "Entertainment",
+    views: "2.4k",
+    featured: true,
+    gradient: "from-amber-500/10 to-amber-100",
+  },
 ];
 
 export function BlogsSection() {

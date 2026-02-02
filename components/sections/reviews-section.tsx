@@ -3,33 +3,33 @@ import { Star, Quote } from "lucide-react"
 
 const reviews = [
   {
-    name: "Rajesh Kumar",
-    role: "Residential Client",
-    rating: 5,
+    name: "Mrs Sarika Jain",
+    role: "Residential interior",
+    rating: 4.8,
     review:
       "Bluemoon transformed our home into a masterpiece. Their attention to detail and professionalism is unmatched.",
     image: "/client1.jpg"
   },
   {
-    name: "Priya Sharma",
-    role: "Commercial Client",
+    name: "Mrs Saira Malik",
+    role: "Residential interior & Modular kitchent",
     rating: 5,
     review:
       "Exceptional service from start to finish. The design team understood our vision perfectly and delivered beyond expectations.",
     image: "/client2.jpg"
   },
   {
-    name: "Amit Patel",
-    role: "Corporate Office",
+    name: "Mr Ishpreet Singh",
+    role: "Home Makeover",
     rating: 5,
     review:
       "Our office space looks absolutely stunning. Bluemoon created an environment that inspires creativity and productivity.",
     image: "/client3.jpg"
   },
   {
-    name: "Sneha Reddy",
-    role: "Restaurant Owner",
-    rating: 5,
+    name: "Kalra Residence",
+    role: "Turnkey interior and Civil work",
+    rating: 4.9,
     review: "Professional, creative, and reliable. They completed our project on time with premium quality materials.",
     image: "/client4.jpg"
   },
