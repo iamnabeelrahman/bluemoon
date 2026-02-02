@@ -168,3 +168,21 @@
     display: none; /* Chrome, Safari */
   }
 }
+/* Prevent flash of wrong content */
+@media (max-width: 767px) {
+  .md\:hidden {
+    display: block !important;
+  }
+  .hidden.md\:block {
+    display: none !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .md\:hidden {
+    display: none !important;
+  }
+  .hidden.md\:block {
+    display: block !important;
+  }
+}
