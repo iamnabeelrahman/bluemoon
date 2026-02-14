@@ -1,136 +1,121 @@
 "use client"
 
 import Link from "next/link"
-import { Menu, X, Sparkles, ChevronRight, Phone, MapPin, Mail, Facebook, Instagram, Linkedin, ArrowRight } from "lucide-react"
-import { useState } from "react"
+import { Menu, X } from "lucide-react"
+import { useState, useEffect } from "react"
 import Image from "next/image"
 
-// ========== NAVBAR ==========
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
 
+  // Lock body scroll when menu is open
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden"
+    } else {
+      document.body.style.overflow = "auto"
+    }
+  }, [isOpen])
+
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-xl border-b border-gray-100">
-      <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Reduced height for mobile, normal for desktop */}
-        <div className="flex items-center justify-between h-10 lg:h-20">
-          {/* Logo - slightly smaller on mobile */}
-          <Link href="/" className="flex items-center gap-3 group">
-            <Image
-              src="/logo.png"
-              alt="Logo"
-              width={0}
-              height={0}
-              sizes="100vw"
-              className="w-12 h-16 lg:w-[110px] lg:h-[130px]"
-            />
-          </Link>
+    <>
+      {/* NAVBAR */}
+      <nav className="fixed top-0 left-0 right-0 z-[1000] bg-white border-b border-gray-100">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="flex items-center justify-between h-14 lg:h-20">
+            {/* Logo */}
+            <Link href="/" className="flex items-center gap-2">
+              <Image
+                src="/logo.png"
+                alt="Logo"
+                width={120}
+                height={120}
+                className="w-12 h-14 lg:w-[100px] lg:h-[120px] object-contain"
+              />
+            </Link>
 
-          {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-8">
-            <Link
-              href="/#services"
-              className="relative text-sm font-light text-gray-700 hover:text-primary-800 transition-colors group"
+            {/* Desktop Links */}
+            <div className="hidden lg:flex items-center gap-8">
+              <NavLink href="/#services" label="Services" />
+              <NavLink href="/kitchens" label="Kitchens" />
+              <NavLink href="/#projects" label="Projects" />
+              <NavLink href="/#reviews" label="Reviews" />
+              <NavLink href="/#contact" label="Contact" />
+            </div>
+
+            {/* Mobile Button */}
+            <button
+              onClick={() => setIsOpen(true)}
+              className="lg:hidden p-2 rounded-md border border-gray-200"
             >
-              Services
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-primary-800 to-gold-500 transition-all group-hover:w-full" />
-            </Link>
-            <Link
-              href="/kitchens"
-              className="relative text-sm font-light text-gray-700 hover:text-primary-800 transition-colors group"
-            >
-              Kitchens
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-primary-800 to-gold-500 transition-all group-hover:w-full" />
-            </Link>
-            <Link
-              href="/#projects"
-              className="relative text-sm font-light text-gray-700 hover:text-primary-800 transition-colors group"
-            >
-              Projects
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-primary-800 to-gold-500 transition-all group-hover:w-full" />
-            </Link>
-            <Link
-              href="/#reviews"
-              className="relative text-sm font-light text-gray-700 hover:text-primary-800 transition-colors group"
-            >
-              Reviews
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-primary-800 to-gold-500 transition-all group-hover:w-full" />
-            </Link>
-            <Link
-              href="/#contact"
-              className="relative text-sm font-light text-gray-700 hover:text-primary-800 transition-colors group"
-            >
-              Contact
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-primary-800 to-gold-500 transition-all group-hover:w-full" />
-            </Link>
-            {/* <Link
-              href="/login"
-              className="relative overflow-hidden group rounded-full bg-gradient-to-r from-primary-800 to-primary-900 px-6 py-2.5 text-sm font-medium text-white transition-all hover:shadow-lg hover:shadow-primary-800/30"
-            >
-              <span className="flex items-center gap-2">
-                Client Portal
-                <ChevronRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-              </span>
-            </Link> */}
+              <Menu className="w-5 h-5" />
+            </button>
           </div>
+        </div>
+      </nav>
 
-          {/* Mobile menu button - smaller on mobile */}
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden p-1 rounded-lg border border-gray-200  transition-colors"
-          >
-            {isOpen ? <X className="w-5 h-5 text-gray-700" /> : <Menu className="w-5 h-5 text-gray-700" />}
+      {/* MOBILE SIDEBAR OVERLAY */}
+      <div
+        className={`fixed inset-0 z-[999] bg-black/40 backdrop-blur-sm transition-opacity duration-300 ${
+          isOpen ? "opacity-100 visible" : "opacity-0 invisible"
+        }`}
+        onClick={() => setIsOpen(false)}
+      />
+
+      {/* MOBILE SIDEBAR */}
+      <div
+        className={`fixed top-0 right-0 h-full w-72 bg-white z-[1001] shadow-2xl transform transition-transform duration-300 ${
+          isOpen ? "translate-x-0" : "translate-x-full"
+        }`}
+      >
+        <div className="flex items-center justify-between p-4 border-b">
+          <span className="font-semibold">Menu</span>
+          <button onClick={() => setIsOpen(false)}>
+            <X className="w-5 h-5" />
           </button>
         </div>
-      </div>
 
-      {/* Mobile Navigation */}
-      {isOpen && (
-        <div className="lg:hidden border-t border-gray-100 bg-white/95 backdrop-blur-xl">
-          <div className="px-4 py-4 space-y-2">
-            <Link
-              href="/#services"
-              className="block text-sm font-light text-gray-700 hover:text-primary-800 transition-colors py-2.5 border-b border-gray-100"
-              onClick={() => setIsOpen(false)}
-            >
-              Services
-            </Link>
-            <Link
-              href="/kitchens"
-              className="block text-sm font-light text-gray-700 hover:text-primary-800 transition-colors py-2.5 border-b border-gray-100"
-              onClick={() => setIsOpen(false)}
-            >
-              Kitchens
-            </Link>
-            <Link
-              href="/#projects"
-              className="block text-sm font-light text-gray-700 hover:text-primary-800 transition-colors py-2.5 border-b border-gray-100"
-              onClick={() => setIsOpen(false)}
-            >
-              Projects
-            </Link>
-            <Link
-              href="/#reviews"
-              className="block text-sm font-light text-gray-700 hover:text-primary-800 transition-colors py-2.5 border-b border-gray-100"
-              onClick={() => setIsOpen(false)}
-            >
-              Reviews
-            </Link>
-            <Link
-              href="/#contact"
-              className="block text-sm font-light text-gray-700 hover:text-primary-800 transition-colors py-2.5 border-b border-gray-100"
-              onClick={() => setIsOpen(false)}
-            >
-              Contact
-            </Link>
-            {/* <Link href="/login" onClick={() => setIsOpen(false)}>
-              <button className="w-full mt-3 rounded-full bg-gradient-to-r from-primary-800 to-primary-900 px-5 py-2.5 text-sm font-medium text-white hover:shadow-lg hover:shadow-primary-800/30 transition-all">
-                Client Portal
-              </button>
-            </Link> */}
-          </div>
+        <div className="flex flex-col p-4 space-y-4">
+          <MobileLink href="/#services" label="Services" close={() => setIsOpen(false)} />
+          <MobileLink href="/kitchens" label="Kitchens" close={() => setIsOpen(false)} />
+          <MobileLink href="/#projects" label="Projects" close={() => setIsOpen(false)} />
+          <MobileLink href="/#reviews" label="Reviews" close={() => setIsOpen(false)} />
+          <MobileLink href="/#contact" label="Contact" close={() => setIsOpen(false)} />
         </div>
-      )}
-    </nav>
+      </div>
+    </>
+  )
+}
+
+/* Desktop Nav Link */
+function NavLink({ href, label }: { href: string; label: string }) {
+  return (
+    <Link
+      href={href}
+      className="text-sm font-medium text-gray-700 hover:text-black transition-colors"
+    >
+      {label}
+    </Link>
+  )
+}
+
+/* Mobile Nav Link */
+function MobileLink({
+  href,
+  label,
+  close,
+}: {
+  href: string
+  label: string
+  close: () => void
+}) {
+  return (
+    <Link
+      href={href}
+      onClick={close}
+      className="text-base font-medium text-gray-700 hover:text-black transition-colors"
+    >
+      {label}
+    </Link>
   )
 }
